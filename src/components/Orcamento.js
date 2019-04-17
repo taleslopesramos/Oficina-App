@@ -6,8 +6,8 @@ const Orcamento = (props) => {
     return(
         <View style={styles.container}>
             <View style={styles.firstView}>
-                <Text style={styles.normalText}>Vendedor:</Text>
-                <Text style={styles.normalText}>Comprador:</Text>
+                <Text style={styles.titleText}>Vendedor:</Text>
+                <Text style={styles.titleText}>Comprador:</Text>
             </View>
             <View style={styles.secondView}>
                 <Text style={styles.normalText}>{props.data.seller}</Text>
@@ -28,10 +28,14 @@ const styles = StyleSheet.create({
         alignItems:'center',
     },
     firstView:{
-        marginRight:10
+        marginRight:10,
     },
     secondView:{
-        marginRight:'auto'
+        marginRight:'auto',
+    },
+    titleText: {
+        fontSize: 16,
+        fontWeight: 'bold',
     },
     normalText: {
       fontSize: 16,
