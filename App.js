@@ -1,6 +1,6 @@
-import React from 'react';
-import Routes from './src/routes';
-import './src/config/StatusBarConfig';
+import React from 'react'
+import Routes from './src/routes'
+import './src/config/StatusBarConfig'
 
 const App = (props) => <Routes />;
 
