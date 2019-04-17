@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-import { Text, View } from 'react-native'
+import { Text, View, ScrollView } from 'react-native'
+import Orcamento from '../components/Orcamento'
 
 export default class Main extends Component {
     constructor(props){
@@ -44,13 +45,26 @@ export default class Main extends Component {
     render() {
         const { orcamentos, loading, error } = this.state;
         
-        return (
-            <View>
-                <Text>Orçamentos:</Text>
-                {
+        if(error){
+            return (
+                <View>
+                    <Text>Ocorreu um erro! não foi possível buscar os orçamentos.</Text>
+                </View>
+            )            
+        }
+        else if(!loading){
+            return (
+                <ScrollView>
+                    {orcamentos.map((orcamento, i) => <Orcamento key={i} data={orcamento}/>)}
+                </ScrollView>
+            )
+        }
+        else{
+            return(
+                <View>
 
-                }
-            </View>
-        )
+                </View>
+            );
+        }
     }
 }
