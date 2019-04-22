@@ -18,12 +18,12 @@ Build Ios `expo build:ios`
 
 # Diretório
 
-# Pages src/pages 
+## Pages src/pages 
 Diretório destinado as páginas do aplicativo.
 
 * **Main Page** (main.js): Página principal da aplicação onde é listado os orçamentos
 
-# Configs src/config
+## Configs src/config
 Arquivos de configuração.
 * **StatusBarConfig.js**: Configurações de cor da status bar (ios/android).
 ## Components src/components
