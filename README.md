@@ -17,6 +17,7 @@ Build Android `expo build:android`
 Build Ios `expo build:ios`  
 
 # Diretório
+A criação de vários diretórios específicos ajuda a crescer a aplicação sem criar bagunça nos arquivos.
 
 ## Pages src/pages 
 Diretório destinado as páginas do aplicativo.
