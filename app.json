@@ -23,7 +23,11 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.codificar.oficinaapp"
+    },
+    "android": {
+      "package": "com.codificar.oficinaapp"
     }
   }
 }

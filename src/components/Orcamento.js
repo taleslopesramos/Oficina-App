@@ -1,22 +1,35 @@
 import React from 'react'
-import { View, Text, StyleSheet } from 'react-native'
+import { View, Text, StyleSheet, TouchableNativeFeedback, Alert } from 'react-native'
 
+const showAlert = (descricao) => {
+    Alert.alert(
+        'Descrição',
+        descricao,
+        [
+        {text: 'Fechar'},
+        ],
+    );
+}
 
 const Orcamento = (props) => {
+    const {description, seller, customer, value} = props.data;
+    
     return(
-        <View style={styles.container}>
-            <View style={styles.firstView}>
-                <Text style={styles.titleText}>Vendedor:</Text>
-                <Text style={styles.titleText}>Comprador:</Text>
+        <TouchableNativeFeedback onPress={()=> showAlert(description)} underlayColor="#2196F3">
+            <View style={styles.container} >
+                <View style={styles.firstView}>
+                    <Text style={styles.titleText}>Vendedor:</Text>
+                    <Text style={styles.titleText}>Comprador:</Text>
+                </View>
+                <View style={styles.secondView}>
+                    <Text style={styles.normalText}>{seller}</Text>
+                    <Text style={styles.normalText}>{customer}</Text>
+                </View>
+                <View>
+                    <Text style={styles.valorText}>{value}</Text>
+                </View>
             </View>
-            <View style={styles.secondView}>
-                <Text style={styles.normalText}>{props.data.seller}</Text>
-                <Text style={styles.normalText}>{props.data.customer}</Text>
-            </View>
-            <View>
-                <Text style={styles.valorText}>{props.data.value}</Text>
-            </View>
-        </View>
+        </TouchableNativeFeedback>
     );
 }
 
