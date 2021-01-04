@@ -1,4 +1,6 @@
 # Oficina App
+Este projeto foi um teste de contratação.
+
 Mobile App em React-Native o qual visa facilitar o acompanhamento dos pedidos de orçamento de uma oficina.  
 É necessário utilizar o expo para rodar o dev server e build `npm install -g expo`
 
